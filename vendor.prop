@@ -217,6 +217,7 @@ vendor.vibrator.hal.effect_id.thud=6
 vendor.vibrator.hal.effect_id.pop=8
 
 # Media
+debug.stagefright.c2inputsurface=-1
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=11
