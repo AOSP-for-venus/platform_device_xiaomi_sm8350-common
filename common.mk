@@ -408,6 +408,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BOARD_PLATFORM := lahaina
 PRODUCT_USES_QCOM_HARDWARE := true
 
+# Perf
+PRODUCT_PACKAGES += \
+    libqti-perfd-client
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.xiaomi-libperfmgr
