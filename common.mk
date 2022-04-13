@@ -29,10 +29,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Inherit Google Camera
 $(call inherit-product, vendor/xiaomi/venus-gcam/venus-gcam-vendor.mk)
 
-# AID/fs configs
-PRODUCT_PACKAGES += \
-    fs_config_files
-
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
