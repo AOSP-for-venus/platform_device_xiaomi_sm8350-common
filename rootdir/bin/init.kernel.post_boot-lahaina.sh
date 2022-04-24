@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2020 Qualcomm Technologies, Inc.
+# Copyright (c) 2020-2021 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -94,10 +94,8 @@ function configure_memory_parameters() {
 	#
 
 	configure_zram_parameters
-	echo 0 > /proc/sys/vm/page-cluster
 	echo 100 > /proc/sys/vm/swappiness
 	echo 1 > /proc/sys/vm/watermark_scale_factor
-	echo 0 > /proc/sys/vm/watermark_boost_factor
 
 	# add memory limit to camera cgroup
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
@@ -109,7 +107,11 @@ function configure_memory_parameters() {
 		let LimitSize=524288000
 	fi
 
-	echo $LimitSize > /dev/memcg/camera/memory.soft_limit_in_bytes
+	echo $LimitSize > /dev/memcg/camera/provider/memory.soft_limit_in_bytes
+
+	if [ $MemTotal -le 8388608 ]; then
+		echo 0 > /proc/sys/vm/watermark_boost_factor
+	fi
 }
 
 rev=`cat /sys/devices/soc0/revision`
@@ -319,7 +321,6 @@ do
 	    echo 50 > $qoslat/mem_latency/ratio_ceil
 	done
 done
-
 echo s2idle > /sys/power/mem_sleep
 configure_memory_parameters
 
