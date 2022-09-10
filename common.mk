@@ -299,13 +299,6 @@ PRODUCT_VENDOR_KERNEL_HEADERS += device/xiaomi/venus-kernel/kernel-headers
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
-ifneq ("$(wildcard hardware/lineage/livedisplay)", "")
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.1-service.xiaomi_sm8350
-endif
-
 # Media
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
