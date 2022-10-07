@@ -63,6 +63,9 @@ function blob_fixup() {
         system_ext/lib64/libwfdnative.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             ;;
+        vendor/bin/hw/vendor.ozoaudio.media.c2@1.0-service)
+            "${PATCHELF}" --add-needed "lib-ozoaudio.so" "${2}"
+            ;;
         vendor/etc/vintf/manifest/c2_manifest_vendor.xml)
             sed -ni '/ozoaudio/!p' "${2}"
             ;;
