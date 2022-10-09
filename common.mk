@@ -122,6 +122,7 @@ PRODUCT_COPY_FILES += \
 
 # Blur
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.supports_background_blur=1
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.sf.blurs_are_expensive=1
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
