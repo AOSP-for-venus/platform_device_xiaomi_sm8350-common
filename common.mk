@@ -26,6 +26,9 @@ $(call inherit-product, vendor/xiaomi/sm8350-common/sm8350-common-vendor.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Inherit Google Camera
+$(call inherit-product, vendor/xiaomi/venus-gcam/venus-gcam-vendor.mk)
+
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
@@ -139,8 +142,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libgui_vendor \
-    Snap
+    libgui_vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
