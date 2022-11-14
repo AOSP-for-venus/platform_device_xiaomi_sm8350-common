@@ -106,7 +106,7 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # APEX
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+TARGET_FLATTEN_APEX := false
 
 # Bluetooth
 PRODUCT_PACKAGES += \
