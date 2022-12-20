@@ -490,8 +490,10 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Spatial Audio
 PRODUCT_PACKAGES += \
-    libspatialaudio \
-    librondo
+    libspatialaudio
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/bluetooth_with_le_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml
 
 # Telephony
 PRODUCT_PACKAGES += \
