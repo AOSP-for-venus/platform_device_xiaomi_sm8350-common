@@ -488,6 +488,11 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
 
+# Spatial Audio
+PRODUCT_PACKAGES += \
+    libspatialaudio \
+    librondo
+
 # Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
