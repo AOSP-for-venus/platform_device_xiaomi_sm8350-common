@@ -906,6 +906,12 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 # Soter service (Tencent)
 -vendor/app/SoterService/SoterService.apk
 
+# Spatial Audio - from cheetah - TQ1A.221205.011
+system/lib/spatializer-aidl-cpp.so|f5e704c22e9939357cff938dcf30c00b7cf70607
+system/lib64/spatializer-aidl-cpp.so|68395e1bb57594d82d7bd73e598facf33869fab0
+vendor/lib/soundfx/libspatialaudio.so|1a193072c8acc0de7cdbbdad86b84c5902d6931d
+vendor/lib64/soundfx/libspatialaudio.so|ff9242b4731b3edd99ca56bee4863ed6a8f430a6
+
 # Thermal
 vendor/bin/mi_thermald
 vendor/lib64/libthermalclient.so
