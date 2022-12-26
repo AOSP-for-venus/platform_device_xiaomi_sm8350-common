@@ -4,15 +4,6 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <compatibility-matrix version="2.0" type="framework">
-    <!-- Wireless power sharing -->
-    <hal format="hidl" optional="true">
-        <name>vendor.lineage.powershare</name>
-        <version>1.0</version>
-        <interface>
-            <name>IPowerShare</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <!-- Display -->
     <hal format="hidl" optional="true">
         <name>vendor.lineage.livedisplay</name>
