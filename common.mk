@@ -182,7 +182,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0.vendor
 
 PRODUCT_PACKAGES += \
-    libdisplayconfig.qti \
     libdisplayconfig.qti.vendor \
     libdisplayconfig.system \
     libdisplayconfig.system.qti \
