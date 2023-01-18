@@ -57,6 +57,9 @@ BOARD_USES_ALSA_AUDIO := true
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# Display
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
+
 # Dolby Vision
 SOONG_CONFIG_NAMESPACES += dolby_vision
 SOONG_CONFIG_dolby_vision += enabled
