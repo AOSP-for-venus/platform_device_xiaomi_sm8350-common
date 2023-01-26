@@ -3,3 +3,7 @@ ro.audio.spatializer_enabled=true
 
 # Optimize spatializer effect
 audio.spatializer.effect.util_clamp_min=300
+
+# RKPD
+remote_provisioning.enable_rkpd=true
+remote_provisioning.hostname=remoteprovisioning.googleapis.com
