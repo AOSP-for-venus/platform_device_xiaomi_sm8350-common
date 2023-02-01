@@ -210,6 +210,35 @@ vendor.display.use_layer_ext=0
 vendor.display.idle_time=1100
 vendor.gralloc.disable_ubwc=0
 
+# Haptics
+vendor.vibrator.hal.duration.tick=30
+vendor.vibrator.hal.duration.texture_tick=30
+vendor.vibrator.hal.duration.click=50
+vendor.vibrator.hal.duration.heavy_click=70
+vendor.vibrator.hal.duration.double_click=50
+vendor.vibrator.hal.duration.thud=60
+vendor.vibrator.hal.duration.pop=50
+vendor.vibrator.hal.index.tick=6
+vendor.vibrator.hal.index.texture_tick=6
+vendor.vibrator.hal.index.click=6
+vendor.vibrator.hal.index.heavy_click=6
+vendor.vibrator.hal.index.thud=8
+vendor.vibrator.hal.index.pop=8
+vendor.vibrator.hal.mode.tick=0
+vendor.vibrator.hal.mode.texture_tick=0
+vendor.vibrator.hal.mode.click=0
+vendor.vibrator.hal.mode.heavy_click=0
+vendor.vibrator.hal.mode.double_click=0
+vendor.vibrator.hal.mode.thud=0
+vendor.vibrator.hal.mode.pop=0
+vendor.vibrator.hal.effect_id.tick=2
+vendor.vibrator.hal.effect_id.texture_tick=2
+vendor.vibrator.hal.effect_id.click=1
+vendor.vibrator.hal.effect_id.heavy_click=5
+vendor.vibrator.hal.effect_id.double_click=1
+vendor.vibrator.hal.effect_id.thud=6
+vendor.vibrator.hal.effect_id.pop=8
+
 # Media
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
