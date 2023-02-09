@@ -36,7 +36,8 @@
         android:label="@string/device_settings_app_name"
         android:persistent="true"
         android:defaultToDeviceProtectedStorage="true"
-        android:directBootAware="true">
+	android:directBootAware="true"
+        android:theme="@style/Theme.SubSettingsBase">
 
         <receiver android:name=".BootCompletedReceiver">
             <intent-filter android:priority="1000">
@@ -56,8 +57,7 @@
 
         <activity
             android:name=".doze.DozeSettingsActivity"
-            android:label="@string/ambient_display_title"
-            android:theme="@style/Theme.SubSettingsBase">
+	    android:label="@string/ambient_display_title">
             <intent-filter>
                 <action android:name="org.lineageos.settings.device.DOZE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -66,8 +66,7 @@
 
         <activity
             android:name=".thermal.ThermalActivity"
-            android:label="@string/thermal_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:label="@string/thermal_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
