@@ -5,6 +5,3 @@ libsdsprpc.so
 libfastcvopt.so
 liblistensoundmodel2.so
 libOpenCL.so
-libSNPE.so
-libsnpe_htp.so
-libmialgo_ai_vision.so
