@@ -246,6 +246,9 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=11
 
+# Multi-Gen LRU
+persist.device_config.mglru_native.lru_gen_config=core
+
 # NFC
 ro.vendor.nfc.repair=1
 ro.vendor.se.type=eSE,HCE,UICC
