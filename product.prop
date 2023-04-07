@@ -1,2 +1,5 @@
 # Declare use of spatial audio
 ro.audio.spatializer_enabled=true
+
+# Optimize spatializer effect
+audio.spatializer.effect.util_clamp_min=300
