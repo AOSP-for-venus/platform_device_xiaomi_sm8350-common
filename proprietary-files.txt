@@ -9,6 +9,9 @@ vendor/lib64/libadsprpc.so
 # Audio HAL
 vendor/lib/libvideoNS.so
 
+# Audio FX modules - from cheetah TQ2A.230305.008.C1
+vendor/lib/soundfx/libspatialaudio.so|379b98b020729d05cad4e84202f42335b96bb755
+
 # Audio FX modules
 system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar

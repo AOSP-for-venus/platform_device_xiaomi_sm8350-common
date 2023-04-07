@@ -1,0 +1,2 @@
+# Declare use of spatial audio
+ro.audio.spatializer_enabled=true
