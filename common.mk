@@ -116,9 +116,6 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
-# APEX
-TARGET_FLATTEN_APEX := false
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
