@@ -26,9 +26,6 @@ $(call inherit-product, vendor/xiaomi/sm8350-common/sm8350-common-vendor.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Inherit Google Camera
-$(call inherit-product, vendor/xiaomi/venus-gcam/venus-gcam-vendor.mk)
-
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
@@ -233,6 +230,9 @@ PRODUCT_COPY_FILES += \
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
+
+# Google Camera
+$(call inherit-product, vendor/gcam/gcam-vendor.mk)
 
 # GPS
 PRODUCT_PACKAGES += \
