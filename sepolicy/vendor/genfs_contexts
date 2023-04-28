@@ -7,6 +7,9 @@ genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary u:object_r:ven
 # Fingerprint
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc u:object_r:vendor_sysfs_fingerprint:s0
 
+# Single Tap Sensor
+genfscon sysfs /devices/platform/soc/a8c000.spi/spi_master/spi1/spi1.0/single_tap_pressed u:object_r:sysfs_touchpanel:s0
+
 # Touch
 genfscon sysfs /devices/virtual/touch/touch_dev/bump_sample_rate u:object_r:sysfs_touchpanel:s0
 

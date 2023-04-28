@@ -114,6 +114,10 @@ on boot
     # Create persist for camera calibration data
     mkdir /mnt/vendor/persist/camera 0755 system cameraserver
 
+    # Single Tap Sensor
+    chown system system /sys/devices/platform/soc/a8c000.spi/spi_master/spi1/spi1.0/single_tap_pressed
+    chmod 0660 /sys/devices/platform/soc/a8c000.spi/spi_master/spi1/spi1.0/single_tap_pressed
+
     # Enable qcrild and data services
     enable vendor.qcrild
     enable vendor.qcrild2
