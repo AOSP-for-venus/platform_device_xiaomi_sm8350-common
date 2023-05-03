@@ -559,15 +559,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
+NEED_AIDL_NDK_PLATFORM_BACKEND := true
+
 # Verified boot
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
-
-# VNDK
-PRODUCT_PACKAGES += \
-    android.hardware.common-V1-ndk_platform.vendor \
-    android.hardware.graphics.common-V1-ndk_platform.vendor
 
 # Vulkan
 PRODUCT_COPY_FILES += \
