@@ -1,0 +1,3 @@
+on boot
+    # FOD
+    chown system system /sys/devices/virtual/touch/tp_dev/fod_state
