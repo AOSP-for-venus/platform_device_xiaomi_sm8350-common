@@ -4,6 +4,9 @@ ro.launcher.blur.appLaunch=0
 # Declare use of spatial audio
 ro.audio.spatializer_enabled=true
 
+# Enable Bluetooth AutoOn feature
+bluetooth.server.automatic_turn_on=true
+
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
