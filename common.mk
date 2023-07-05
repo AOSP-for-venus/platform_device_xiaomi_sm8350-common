@@ -232,7 +232,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
 # Google Camera
-$(call inherit-product, vendor/gcam/gcam-vendor.mk)
+$(call inherit-product-if-exists, vendor/gcam/gcam-vendor.mk)
 
 # GPS
 PRODUCT_PACKAGES += \
