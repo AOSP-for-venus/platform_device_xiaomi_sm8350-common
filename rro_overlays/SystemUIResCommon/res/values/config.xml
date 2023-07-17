@@ -62,13 +62,3 @@
     <!-- Preferred max refresh rate at keyguard, if supported by the display. -->
     <integer name="config_keyguardMaxRefreshRate">60</integer>
 </resources>
->
-        <item>-1</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </integer-array>
->>>>>>> 0bfa4a2 (sm8350-common: overlay: Add support for doze auto brightness)
-</resources>
