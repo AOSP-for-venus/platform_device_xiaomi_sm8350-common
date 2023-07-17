@@ -94,8 +94,6 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-TARGET_KERNEL_CLANG_COMPILE := true
-
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
@@ -184,11 +182,6 @@ include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-
-# Soong
-SOONG_CONFIG_NAMESPACES += xiaomiSm8350Vars
-SOONG_CONFIG_xiaomiSm8350Vars += vibrator_use_effect_stream
-SOONG_CONFIG_xiaomiSm8350Vars_vibrator_use_effect_stream ?= false
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
