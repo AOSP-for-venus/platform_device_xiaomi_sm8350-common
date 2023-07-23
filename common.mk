@@ -436,7 +436,7 @@ PRODUCT_USES_QCOM_HARDWARE := true
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service.xiaomi-libperfmgr
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/lahaina/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
@@ -490,6 +490,8 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     vendor/hardware/xiaomi
 
 # Telephony
