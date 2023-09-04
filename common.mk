@@ -435,8 +435,7 @@ PRODUCT_BOARD_PLATFORM := lahaina
 PRODUCT_USES_QCOM_HARDWARE := true
 
 # Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+$(call inherit-product, vendor/qcom/opensource/power/power-vendor-product.mk)
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/lahaina/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
