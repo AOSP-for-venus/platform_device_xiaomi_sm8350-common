@@ -20,6 +20,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression_wit
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Inherit Perf aspects
+TARGET_KERNEL_VERSION := 5.4
+QCOM_COMMON_PATH := device/qcom/common
+
+$(call inherit-product, device/qcom/common/system/perf/qti-perf.mk)
+$(call inherit-product, device/qcom/common/vendor/perf-legacy/qti-perf-legacy.mk)
+
 # Inherit proprietary targets
 $(call inherit-product, vendor/xiaomi/sm8350-common/sm8350-common-vendor.mk)
 
@@ -424,9 +431,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Perf
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.3.vendor
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
@@ -517,6 +521,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
