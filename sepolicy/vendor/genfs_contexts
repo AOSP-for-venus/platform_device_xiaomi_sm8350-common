@@ -13,6 +13,9 @@ genfscon sysfs /devices/platform/soc/a8c000.spi/spi_master/spi1/spi1.0/single_ta
 # Touch
 genfscon sysfs /devices/virtual/touch/touch_dev/bump_sample_rate u:object_r:sysfs_touchpanel:s0
 
+# USB
+genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,ucsi/typec u:object_r:vendor_sysfs_usb_c:s0
+
 # Vibrator
 genfscon sysfs /bus/i2c/drivers/aw8697_haptic/0-005a/activate                   u:object_r:sysfs_haptics:s0
 genfscon sysfs /bus/i2c/drivers/aw8697_haptic/0-005a/duration                   u:object_r:sysfs_haptics:s0
