@@ -478,6 +478,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@2.1-service.xiaomi-multihal \
     sensors.xiaomi_sm8350 \
     vendor.qti.hardware.display.mapper@1.1.vendor
