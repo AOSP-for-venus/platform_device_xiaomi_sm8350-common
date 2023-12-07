@@ -160,6 +160,10 @@ persist.vendor.dpm.idletimer.mode=default
 persist.vendor.dpm.nsrm.bkg.evt=3955
 persist.vendor.dpmhalservice.enable=1
 
+# EGL
+ro.egl.blobcache.multifile=true
+ro.egl.blobcache.multifile_limit=33554432
+
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
