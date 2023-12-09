@@ -174,6 +174,7 @@ persist.sys.sf.native_mode=258
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
+ro.surface_flinger.enable_frame_rate_override=false
 ro.surface_flinger.set_display_power_timer_ms?=1000
 ro.surface_flinger.set_idle_timer_ms?=350
 ro.vendor.sf.enable_fb_scaling=1
