@@ -15,24 +15,8 @@
 on init
     copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
 
-    # Runtime fs tuning
-    write /sys/block/sda/queue/read_ahead_kb 128
-    write /sys/block/sda/queue/nr_requests 128
-    write /sys/block/sda/queue/iostats 1
-    write /sys/block/dm-0/queue/read_ahead_kb 128
-    write /sys/block/dm-1/queue/read_ahead_kb 128
-    write /sys/block/dm-2/queue/read_ahead_kb 128
-    write /sys/block/dm-3/queue/read_ahead_kb 128
-    write /sys/block/dm-4/queue/read_ahead_kb 128
-    write /sys/block/dm-5/queue/read_ahead_kb 128
-    write /sys/block/dm-6/queue/read_ahead_kb 128
-    write /sys/block/dm-7/queue/read_ahead_kb 128
-    write /sys/block/dm-8/queue/read_ahead_kb 128
-    write /sys/block/dm-9/queue/read_ahead_kb 128
-
-# Migrate tasks again in case kernel threads are created during boot
-on property:sys.boot_completed=1
-    copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
+    # Samsung Generic I/O Scheduler
+    write /dev/blkio/background/blkio.ssg.max_available_ratio 25
 
 on property:vendor.post_boot.parsed=1
     # Setup runtime cpusets
@@ -66,11 +50,13 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuctl/background/cpu.uclamp.max 50
     write /dev/cpuctl/system-background/cpu.uclamp.max 50
     write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
+
     # Setup cpu.shares to throttle background groups (bg ~ 5% sysbg ~ 5% dex2oat ~2.5%)
     write /dev/cpuctl/background/cpu.shares 1024
     write /dev/cpuctl/system-background/cpu.shares 1024
     write /dev/cpuctl/dex2oat/cpu.shares 512
     write /dev/cpuctl/system/cpu.shares 20480
+
     # We only have system and background groups holding tasks and the groups below are empty
     write /dev/cpuctl/camera-daemon/cpu.shares 20480
     write /dev/cpuctl/foreground/cpu.shares 20480
@@ -99,10 +85,6 @@ on property:vendor.post_boot.parsed=1
     write /proc/irq/70/smp_affinity_list 2
     write /proc/irq/222/smp_affinity_list 1
 
-# Samsung Generic I/O Scheduler
-on init
-    write /dev/blkio/background/blkio.ssg.max_available_ratio 25
-
 # Currently only enabled for Lahaina (not shima/yupik), which matches Qualcomm.
 on property:persist.vendor.power.profile=performance && property:vendor.post_boot.parsed=1 && property:ro.boot.product.vendor.sku=lahaina
     write /proc/sys/kernel/sched_busy_hysteresis_enable_cpus 20
@@ -111,3 +93,22 @@ on property:persist.vendor.power.profile=performance && property:vendor.post_boo
     write /proc/sys/kernel/sched_busy_hysteresis_enable_cpus 255
     write /sys/module/lpm_levels/parameters/bias_hyst 99
     write /proc/sys/kernel/sched_prefer_spread 3
+
+on property:sys.boot_completed=1
+    # Runtime fs tuning
+    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/sda/queue/iostats 1
+    write /sys/block/dm-0/queue/read_ahead_kb 128
+    write /sys/block/dm-1/queue/read_ahead_kb 128
+    write /sys/block/dm-2/queue/read_ahead_kb 128
+    write /sys/block/dm-3/queue/read_ahead_kb 128
+    write /sys/block/dm-4/queue/read_ahead_kb 128
+    write /sys/block/dm-5/queue/read_ahead_kb 128
+    write /sys/block/dm-6/queue/read_ahead_kb 128
+    write /sys/block/dm-7/queue/read_ahead_kb 128
+    write /sys/block/dm-8/queue/read_ahead_kb 128
+    write /sys/block/dm-9/queue/read_ahead_kb 128
+
+    # Migrate tasks again in case kernel threads are created during boot
+    copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
