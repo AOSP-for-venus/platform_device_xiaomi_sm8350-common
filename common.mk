@@ -212,9 +212,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
-# Google Camera
-$(call inherit-product-if-exists, vendor/gcam/gcam-vendor.mk)
-
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor \
