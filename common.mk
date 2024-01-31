@@ -581,5 +581,6 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 PRODUCT_PACKAGES += \
+    android.media.audio.common.types-V1-cpp \
     libnl \
     libwfdaac_vendor
