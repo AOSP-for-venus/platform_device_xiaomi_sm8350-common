@@ -167,7 +167,7 @@ PRODUCT_PACKAGES += \
     memtrack.default
 
 PRODUCT_COPY_FILES += \
-    hardware/qcom-caf/sm8350/display/config/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml
+    hardware/qcom/display/config/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -390,6 +390,9 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Platform
+TARGET_BOARD_PLATFORM := lahaina
 
 # Power
 PRODUCT_PACKAGES += \
