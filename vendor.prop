@@ -164,6 +164,9 @@ persist.vendor.dpmhalservice.enable=1
 ro.egl.blobcache.multifile=true
 ro.egl.blobcache.multifile_limit=33554432
 
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
