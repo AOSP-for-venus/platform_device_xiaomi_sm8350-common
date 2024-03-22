@@ -37,7 +37,6 @@
 
 # Power
 /dev/xiaomi-touch                                                  u:object_r:vendor_touchfeature_device:s0
-/vendor/bin/hw/android\.hardware\.power-service\.xiaomi-libperfmgr u:object_r:hal_power_default_exec:s0
 
 # Sensors
 /sys/bus/iio/devices                                                                                                            u:object_r:vendor_sysfs_iio:s0

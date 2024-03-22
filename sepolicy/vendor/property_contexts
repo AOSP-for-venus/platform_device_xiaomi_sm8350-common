@@ -13,6 +13,3 @@ ro.hardware.fp.udfps    u:object_r:vendor_fp_prop:s0
 # Mlipay
 persist.vendor.sys.pay.                 u:object_r:vendor_tee_listener_prop:s0
 persist.vendor.sys.provision.status     u:object_r:vendor_tee_listener_prop:s0
-
-# Power
-vendor.powerhal.                        u:object_r:vendor_power_prop:s0

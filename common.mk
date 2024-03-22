@@ -413,12 +413,13 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.xiaomi-libperfmgr \
     android.hardware.power.stats@1.0
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+
+include vendor/hardware/xiaomi/aidl/power-libperfmgr/aidl/device.mk
 
 # Protobuf
 PRODUCT_PACKAGES += \
