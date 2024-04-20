@@ -59,3 +59,6 @@ persist.sys.fflag.override.settings_provider_model=false
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
+
+# Silence minksocket logs
+persist.log.tag.minksocket=S
