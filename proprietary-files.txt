@@ -12,8 +12,8 @@ system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
 
-# Audio FX modules - from cheetah TQ2A.230305.008.C1
-vendor/lib/soundfx/libspatialaudio.so|379b98b020729d05cad4e84202f42335b96bb755
+# Audio FX modules - from cheetah AP1A.240405.002.B1
+vendor/lib/soundfx/libspatialaudio.so|f6b3bfb39ef6ad709494d016f28fd057d79b6085
 
 # Audio HAL
 vendor/lib/libvideoNS.so
