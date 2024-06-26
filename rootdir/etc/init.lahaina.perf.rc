@@ -86,6 +86,9 @@ on property:vendor.post_boot.parsed=1
     write /proc/irq/222/smp_affinity_list 6
 
 on property:sys.boot_completed=1
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
     # Runtime fs tuning
     write /sys/block/sda/queue/read_ahead_kb 128
     write /sys/block/sda/queue/nr_requests 128
