@@ -415,13 +415,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BOARD_PLATFORM := lahaina
 PRODUCT_USES_QCOM_HARDWARE := true
 
-# Perf
-PRODUCT_PACKAGES += \
-    libqti-perfd-client
-
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.xiaomi-libperfmgr
+    android.hardware.power-service.pixel-libperfmgr \
+    libqti-perfd-client
 
 PRODUCT_PACKAGES += \
     libssl.vendor
@@ -490,6 +487,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
+    hardware/qcom-caf/common/libqti-perfd-client \
     vendor/hardware/xiaomi
 
 # Telephony
