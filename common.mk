@@ -179,9 +179,6 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_PACKAGES += \
     XiaomiParts
 
-# Dex
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
-
 # Display
 $(call inherit-product, hardware/qcom-caf/sm8350/display/config/display-board.mk)
 $(call inherit-product, hardware/qcom-caf/sm8350/display/config/display-product.mk)
