@@ -72,7 +72,7 @@ function blob_fixup() {
         system_ext/lib/libwfdnative.so | system_ext/lib64/libwfdnative.so )
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             ;;
-        vendor/lib/c2.dolby.client.so)
+        vendor/lib64/c2.dolby.client.so)
             grep -q "dolbycodec_shim.so" "${2}" || "${PATCHELF}" --add-needed "dolbycodec_shim.so" "${2}"
             ;;
     esac
