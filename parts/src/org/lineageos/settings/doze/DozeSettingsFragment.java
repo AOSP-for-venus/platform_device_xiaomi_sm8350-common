@@ -21,7 +21,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -32,7 +31,6 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.TwoStatePreference;
 
@@ -66,7 +64,8 @@ public class DozeSettingsFragment extends PreferenceFragment
         mSwitchBar.addOnSwitchChangeListener(this);
         mSwitchBar.setChecked(dozeEnabled);
 
-        mAlwaysOnDisplayPreference = (TwoStatePreference) findPreference(DozeUtils.ALWAYS_ON_DISPLAY);
+        mAlwaysOnDisplayPreference =
+                (TwoStatePreference) findPreference(DozeUtils.ALWAYS_ON_DISPLAY);
         mAlwaysOnDisplayPreference.setEnabled(dozeEnabled);
         mAlwaysOnDisplayPreference.setChecked(DozeUtils.isAlwaysOnEnabled(getActivity()));
         mAlwaysOnDisplayPreference.setOnPreferenceChangeListener(this);
@@ -100,10 +99,11 @@ public class DozeSettingsFragment extends PreferenceFragment
             }
         }
 
-        mHandler.post(() -> {
-            DozeUtils.checkDozeService(getActivity());
-            DozeUtils.updateDozeBrightnessIcon(getContext(), mDozeBrightnessPreference);
-        });
+        mHandler.post(
+                () -> {
+                    DozeUtils.checkDozeService(getActivity());
+                    DozeUtils.updateDozeBrightnessIcon(getContext(), mDozeBrightnessPreference);
+                });
 
         return true;
     }

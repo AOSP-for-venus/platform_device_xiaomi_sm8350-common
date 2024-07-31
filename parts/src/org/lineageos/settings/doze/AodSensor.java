@@ -22,6 +22,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -42,7 +43,9 @@ public class AodSensor implements SensorEventListener {
         mExecutorService = Executors.newSingleThreadExecutor();
     }
 
-    private Future<?> submit(Runnable runnable) { return mExecutorService.submit(runnable); }
+    private Future<?> submit(Runnable runnable) {
+        return mExecutorService.submit(runnable);
+    }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
@@ -66,15 +69,20 @@ public class AodSensor implements SensorEventListener {
         if (DEBUG) {
             Log.d(TAG, "Enabling");
         }
-        submit(() -> {
-            mSensorManager.registerListener(this, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
-        });
+        submit(
+                () -> {
+                    mSensorManager.registerListener(
+                            this, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
+                });
     }
 
     protected void disable() {
         if (DEBUG) {
             Log.d(TAG, "Disabling");
         }
-        submit(() -> { mSensorManager.unregisterListener(this, mSensor); });
+        submit(
+                () -> {
+                    mSensorManager.unregisterListener(this, mSensor);
+                });
     }
 }

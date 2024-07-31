@@ -22,16 +22,14 @@ import static android.provider.Settings.Secure.DOZE_ENABLED;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.hardware.display.AmbientDisplayConfiguration;
-import android.os.PowerManager;
-import android.os.SystemClock;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
+
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceManager;
 
@@ -63,21 +61,19 @@ public final class DozeUtils {
         restoreDozeModes(context);
         enableScreenOffUdfpsByDefault(context);
     }
+
     public static void startService(Context context) {
-        if (DEBUG)
-            Log.d(TAG, "Starting service");
+        if (DEBUG) Log.d(TAG, "Starting service");
         context.startServiceAsUser(new Intent(context, DozeService.class), UserHandle.CURRENT);
     }
 
     protected static void stopService(Context context) {
-        if (DEBUG)
-            Log.d(TAG, "Stopping service");
+        if (DEBUG) Log.d(TAG, "Stopping service");
         context.stopServiceAsUser(new Intent(context, DozeService.class), UserHandle.CURRENT);
     }
 
     public static void checkDozeService(Context context) {
-        if (isDozeEnabled(context)
-                && (isAlwaysOnEnabled(context) || sensorsEnabled(context))) {
+        if (isDozeEnabled(context) && (isAlwaysOnEnabled(context) || sensorsEnabled(context))) {
             startService(context);
         } else {
             stopService(context);
@@ -86,19 +82,25 @@ public final class DozeUtils {
 
     private static void restoreDozeModes(Context context) {
         if (!isDozeAutoBrightnessEnabled(context)) {
-            setDozeMode(PreferenceManager.getDefaultSharedPreferences(context).getString(
-                    DOZE_BRIGHTNESS_KEY, String.valueOf(DOZE_MODE_HBM)));
+            setDozeMode(
+                    PreferenceManager.getDefaultSharedPreferences(context)
+                            .getString(DOZE_BRIGHTNESS_KEY, String.valueOf(DOZE_MODE_HBM)));
         }
     }
 
     private static void enableScreenOffUdfpsByDefault(Context context) {
         try {
-            Settings.Secure.getIntForUser(context.getContentResolver(), SCREEN_OFF_UDFPS_ENABLED,
-                UserHandle.USER_CURRENT);
+            Settings.Secure.getIntForUser(
+                    context.getContentResolver(),
+                    SCREEN_OFF_UDFPS_ENABLED,
+                    UserHandle.USER_CURRENT);
         } catch (SettingNotFoundException e) {
             Log.i(TAG, "Setting screen_off_udfps_enabled to 1 by default.");
-            Settings.Secure.putIntForUser(context.getContentResolver(), SCREEN_OFF_UDFPS_ENABLED,
-                1, UserHandle.USER_CURRENT);
+            Settings.Secure.putIntForUser(
+                    context.getContentResolver(),
+                    SCREEN_OFF_UDFPS_ENABLED,
+                    1,
+                    UserHandle.USER_CURRENT);
         }
     }
 
@@ -111,17 +113,23 @@ public final class DozeUtils {
     }
 
     protected static boolean enableAlwaysOn(Context context, boolean enable) {
-        return Settings.Secure.putIntForUser(context.getContentResolver(), DOZE_ALWAYS_ON,
-                enable ? 1 : 0, UserHandle.USER_CURRENT);
+        return Settings.Secure.putIntForUser(
+                context.getContentResolver(),
+                DOZE_ALWAYS_ON,
+                enable ? 1 : 0,
+                UserHandle.USER_CURRENT);
     }
 
     protected static boolean isAlwaysOnEnabled(Context context) {
-        final boolean enabledByDefault = context.getResources().getBoolean(
-                com.android.internal.R.bool.config_dozeAlwaysOnEnabled);
+        final boolean enabledByDefault =
+                context.getResources()
+                        .getBoolean(com.android.internal.R.bool.config_dozeAlwaysOnEnabled);
 
-        return Settings.Secure.getIntForUser(context.getContentResolver(), DOZE_ALWAYS_ON,
-                       alwaysOnDisplayAvailable(context) && enabledByDefault ? 1 : 0,
-                       UserHandle.USER_CURRENT)
+        return Settings.Secure.getIntForUser(
+                        context.getContentResolver(),
+                        DOZE_ALWAYS_ON,
+                        alwaysOnDisplayAvailable(context) && enabledByDefault ? 1 : 0,
+                        UserHandle.USER_CURRENT)
                 != 0;
     }
 
@@ -153,8 +161,8 @@ public final class DozeUtils {
     }
 
     protected static void updateDozeBrightnessIcon(Context context, ListPreference preference) {
-        switch (PreferenceManager.getDefaultSharedPreferences(context).getString(
-                DOZE_BRIGHTNESS_KEY, DOZE_BRIGHTNESS_LBM)) {
+        switch (PreferenceManager.getDefaultSharedPreferences(context)
+                .getString(DOZE_BRIGHTNESS_KEY, DOZE_BRIGHTNESS_LBM)) {
             case DozeUtils.DOZE_BRIGHTNESS_LBM:
                 preference.setIcon(R.drawable.ic_doze_brightness_low);
                 break;

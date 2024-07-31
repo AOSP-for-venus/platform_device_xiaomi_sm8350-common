@@ -33,8 +33,7 @@ public class DozeService extends Service {
 
     @Override
     public void onCreate() {
-        if (DEBUG)
-            Log.d(TAG, "Creating service");
+        if (DEBUG) Log.d(TAG, "Creating service");
         mAodSensor = new AodSensor(this);
 
         IntentFilter screenStateFilter = new IntentFilter();
@@ -45,15 +44,13 @@ public class DozeService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (DEBUG)
-            Log.d(TAG, "Starting service");
+        if (DEBUG) Log.d(TAG, "Starting service");
         return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
-        if (DEBUG)
-            Log.d(TAG, "Destroying service");
+        if (DEBUG) Log.d(TAG, "Destroying service");
         super.onDestroy();
         this.unregisterReceiver(mScreenStateReceiver);
     }
@@ -64,29 +61,28 @@ public class DozeService extends Service {
     }
 
     private void onDisplayOn() {
-        if (DEBUG)
-            Log.d(TAG, "Display on");
+        if (DEBUG) Log.d(TAG, "Display on");
         if (DozeUtils.isDozeAutoBrightnessEnabled(this)) {
             mAodSensor.disable();
         }
     }
 
     private void onDisplayOff() {
-        if (DEBUG)
-            Log.d(TAG, "Display off");
+        if (DEBUG) Log.d(TAG, "Display off");
         if (DozeUtils.isDozeAutoBrightnessEnabled(this)) {
             mAodSensor.enable();
         }
     }
 
-    private BroadcastReceiver mScreenStateReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
-                onDisplayOn();
-            } else if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
-                onDisplayOff();
-            }
-        }
-    };
+    private BroadcastReceiver mScreenStateReceiver =
+            new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
+                        onDisplayOn();
+                    } else if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
+                        onDisplayOff();
+                    }
+                }
+            };
 }
