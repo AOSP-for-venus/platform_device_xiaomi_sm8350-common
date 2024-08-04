@@ -109,4 +109,4 @@ on property:sys.boot_completed=1
 
 # Hardware revision
 on property:ro.boot.hwlevel=*
-    setprop ro.boot.hardware.revision ${ro.boot.hwlevel}
+    setprop ro.boot.hardware.revision ${ro.boot.hwc}_${ro.boot.hwlevel}_${ro.boot.hwversion}
