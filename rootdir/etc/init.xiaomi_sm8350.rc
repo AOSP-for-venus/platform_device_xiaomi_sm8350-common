@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Paranoid Android
+# Copyright (C) 2021-2024 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,9 +14,6 @@
 
 on init
     copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
-
-    # Samsung Generic I/O Scheduler
-    write /dev/blkio/background/blkio.ssg.max_available_ratio 25
 
 on property:vendor.post_boot.parsed=1
     # Setup runtime cpusets
@@ -84,6 +81,9 @@ on property:vendor.post_boot.parsed=1
     # IRQ 222: kgsl_3d0_irq -> CPU 6
     write /proc/irq/70/smp_affinity_list 7
     write /proc/irq/222/smp_affinity_list 6
+
+    # Samsung Generic I/O Scheduler
+    write /dev/blkio/background/blkio.ssg.max_available_ratio 25
 
 on property:sys.boot_completed=1
     # Enable PowerHAL hint processing
