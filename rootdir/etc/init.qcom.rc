@@ -88,6 +88,8 @@ on boot
     mkdir /mnt/vendor/persist/iar_db 0770 system system
     mkdir /mnt/vendor/spunvm 0770 system system
 
+    chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
+
     # To prevent out of order acknowledgements from making
     # connection tracking to treat them as not belonging to
     # the connection they belong to.
@@ -315,6 +317,10 @@ service charger /system/bin/charger
     group system graphics input
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
+
+on charger
+    setprop persist.sys.usb.config mass_storage
+    start qcom-post-boot
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
