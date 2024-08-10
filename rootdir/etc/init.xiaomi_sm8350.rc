@@ -15,6 +15,11 @@
 on init
     copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
 
+    # Make foreground and background I/O priority different. none-to-rt was
+    # introduced in kernel 5.14. promote-to-rt was introduced in kernel 6.5.
+    # Write none-to-rt to match the backport source version.
+    write /dev/blkio/blkio.prio.class none-to-rt
+
 on property:vendor.post_boot.parsed=1
     # Setup runtime cpusets
     write /dev/cpuset/top-app/cpus 0-7
