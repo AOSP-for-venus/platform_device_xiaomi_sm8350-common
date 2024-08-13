@@ -15,6 +15,11 @@ vendor/lib/soundfx/libshoebox.so
 # Audio FX modules - from cheetah AP1A.240405.002.B1
 vendor/lib/soundfx/libspatialaudio.so|f6b3bfb39ef6ad709494d016f28fd057d79b6085
 
+# Audio FX modules - from taoyao V816.0.8.0.ULIMIXM
+vendor/lib/soundfx/libhwdap.so|bd5a81979b0a0a1a005528d8fbdd8091d5dbd7bb
+vendor/lib/soundfx/libswgamedap.so|16a278f696398b34f878a60e9eaddabfce5d8d1b
+vendor/lib/soundfx/libswvqe.so|08cdbd231cd8946e5aaaf428984dd96212236a7d
+
 # Audio HAL
 vendor/lib/libvideoNS.so
 
@@ -410,6 +415,19 @@ vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib64/libmmosal.so
+
+# Media (Dolby Atmos) - from taoyao V816.0.8.0.ULIMIXM
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|924e861c7dc5ea9410483e5c3ebdf5939974f46e
+vendor/etc/dolby/dax-default.xml|7198d19cf455d484aa20aa2b91c34a6cffd8163e
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
+vendor/etc/media_codecs_dolby_audio.xml|a794eb15fc198d0285510260025cd99b53fa174f
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml|e14caab9b769e58a993583c0486d58b30249ca92
+vendor/lib/libdapparamstorage.so|3a65fd6fb470677f5829ef54ce63debbbae57585
+vendor/lib/vendor.dolby.hardware.dms@2.0.so|3324c7be3a8cd4af70b20d99e03be8803eb98936
+vendor/lib64/libdapparamstorage.so|cfdcd8b2dd3761af0db6522e3beec65d53ddb7bf
+vendor/lib64/libdlbdsservice.so|107009f9627ec2b0c222bb3468e7c158643fbdd8
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so|b1e1f4717e4e25dc9bdd077320531164cf971c08
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so|bc4bedec843a0462fd90c0d51e4dc47848c484fc
 
 # Media (Dolby Vision)
 vendor/bin/hw/dolbycodec2
