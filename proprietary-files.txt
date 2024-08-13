@@ -10,6 +10,7 @@ vendor/lib64/libadsprpc.so
 system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/soundfx/libshoebox.so
 
 # Audio FX modules - from cheetah AP1A.240405.002.B1
