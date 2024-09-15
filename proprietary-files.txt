@@ -21,7 +21,7 @@ vendor/lib/soundfx/libshoebox.so
 vendor/lib/soundfx/libspatialaudio.so|f6b3bfb39ef6ad709494d016f28fd057d79b6085
 
 # Audio HAL
-vendor/lib/libvideoNS.so
+vendor/lib/libvideoNS.so;DISABLE_CHECKELF
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
