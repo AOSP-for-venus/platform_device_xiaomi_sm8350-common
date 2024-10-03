@@ -603,3 +603,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libpng.vendor
+
+# Window Extensions
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
