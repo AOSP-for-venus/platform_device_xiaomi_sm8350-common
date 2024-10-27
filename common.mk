@@ -192,7 +192,8 @@ $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/dis
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm-service.clearkey \
+    libcrypto_shim
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -598,6 +599,8 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.media.audio.common.types-V1-cpp \
     android.media.audio.common.types-V2-cpp \
+    libgui_shim \
+    libinput_shim \
     libnl \
     libwfdaac_vendor
 
