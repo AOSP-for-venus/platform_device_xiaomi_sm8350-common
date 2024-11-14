@@ -237,6 +237,8 @@ telephony.lteOnCdmaDevice=1
 persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.on_change_sample_period=true
 persist.vendor.sensors.sync_request=true
+ro.vendor.sensors.xiaomi.double_tap=true
+ro.vendor.sensors.xiaomi.single_tap=true
 
 # SoC
 ro.soc.manufacturer=QTI
