@@ -393,6 +393,10 @@ vendor/etc/media_yupik_v1/video_system_specs.json
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 vendor/etc/video_system_specs.json
+vendor/lib/libAlacSwDec.so
+vendor/lib/libApeSwDec.so
+vendor/lib/libMpeghSwEnc.so
+vendor/lib/libdsd2pcm.so
 vendor/lib/libmmosal.so
 vendor/lib/libqc2vppfilter.so
 vendor/lib/libqcodec2_base.so
@@ -402,6 +406,9 @@ vendor/lib/libqcodec2_hooks.so
 vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
+vendor/lib64/libAlacSwDec.so
+vendor/lib64/libApeSwDec.so
+vendor/lib64/libMpeghSwEnc.so
 vendor/lib64/libmmosal.so
 
 # Media (Dolby Vision)
@@ -443,40 +450,6 @@ vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
 
 # NVRAM
 vendor/bin/nv_mac
-
-# OMX
-vendor/lib/libAlacSwDec.so
-vendor/lib/libApeSwDec.so
-vendor/lib/libMpeghSwEnc.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxAlacDec.so
-vendor/lib/libOmxAlacDecSw.so
-vendor/lib/libOmxAmrwbplusDec.so
-vendor/lib/libOmxApeDec.so
-vendor/lib/libOmxApeDecSw.so
-vendor/lib/libOmxDsdDec.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxG711Dec.so
-vendor/lib/libOmxMpeghDecSw.so
-vendor/lib/libOmxMpeghEncSw.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxVideoDSMode.so
-vendor/lib/libOmxWmaDec.so
-vendor/lib/libdsd2pcm.so
-vendor/lib64/libAlacSwDec.so
-vendor/lib64/libApeSwDec.so
-vendor/lib64/libMpeghSwEnc.so
-vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxAlacDec.so
-vendor/lib64/libOmxAlacDecSw.so
-vendor/lib64/libOmxAmrwbplusDec.so
-vendor/lib64/libOmxApeDec.so
-vendor/lib64/libOmxApeDecSw.so
-vendor/lib64/libOmxEvrcDec.so
-vendor/lib64/libOmxG711Dec.so
-vendor/lib64/libOmxMpeghEncSw.so
-vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxWmaDec.so
 
 # Peripheral manager
 vendor/bin/pm-proxy
