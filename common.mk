@@ -543,9 +543,6 @@ PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
 # WiFi Display
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
 PRODUCT_PACKAGES += \
     android.media.audio.common.types-V1-cpp \
     android.media.audio.common.types-V2-cpp \
