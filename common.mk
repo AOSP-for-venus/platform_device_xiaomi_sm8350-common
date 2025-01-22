@@ -182,6 +182,9 @@ $(call inherit-product, vendor/qcom/opensource/commonsys/display/config/display-
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk)
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk)
 
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.memtrack-service
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
