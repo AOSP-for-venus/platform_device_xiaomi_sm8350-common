@@ -1,1 +1,5 @@
+# Domain for Flipendo
+user=_app seinfo=platform name=com.google.android.flipendo domain=flipendo type=app_data_file levelFrom=all
+
+user=_app seinfo=platform name=com.google.android.turboadapter domain=turbo_adapter type=app_data_file levelFrom=all
 user=system seinfo=platform name=org.lineageos.settings domain=devicesettings_app type=system_app_data_file
