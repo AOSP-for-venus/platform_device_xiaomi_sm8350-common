@@ -194,7 +194,7 @@ ro.config.vc_call_vol_steps=11
 vendor.media.omx=0
 
 # Multi-Gen LRU
-persist.device_config.mglru_native.lru_gen_config=core
+persist.device_config.mglru_native.lru_gen_config=core_and_mm_walk
 
 # NFC
 ro.vendor.nfc.repair=1
