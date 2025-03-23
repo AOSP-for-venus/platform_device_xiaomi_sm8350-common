@@ -76,7 +76,7 @@ firmware_directories /vendor/firmware_mnt/image/
 # qvr
 /dev/qvr_external_sensor_ioctl      0660  system  system
 /dev/bus/usb/*                      0660  root    usb
-/dev/hidraw*                        0660  root    usb
+/dev/hidraw*                        0660  system  system
 
 # wlan
 /sys/devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/wlan*/queues/rx-* rps_cpus      0660   system     system
