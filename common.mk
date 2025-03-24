@@ -566,3 +566,6 @@ PRODUCT_PACKAGES += \
 
 # Window Extensions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
+
+# ZramWriteback
+-include hardware/google/pixel/mm/device_gki.mk
