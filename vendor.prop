@@ -237,6 +237,9 @@ persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.on_change_sample_period=true
 persist.vendor.sensors.sync_request=true
 
+# Set zram size
+vendor.zram.size=50p
+
 # SoC
 ro.soc.manufacturer=QTI
 ro.soc.model=SM8350
