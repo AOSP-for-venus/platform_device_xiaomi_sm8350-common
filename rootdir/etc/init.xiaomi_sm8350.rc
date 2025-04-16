@@ -33,14 +33,6 @@ on property:vendor.post_boot.parsed=1
     write /sys/devices/system/cpu/cpu_boost/input_boost_ms 120
     write /sys/devices/system/cpu/cpu_boost/sched_boost_on_input 1
 
-    # Configure schedutil ratelimits
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 10000
-    write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/down_rate_limit_us 5000
-
     # Configure scheduler
     write /proc/sys/kernel/sched_upmigrate "65 85"
     write /proc/sys/kernel/sched_downmigrate "60 75"
@@ -65,14 +57,6 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuctl/nnapi-hal/cpu.shares 20480
     write /dev/cpuctl/rt/cpu.shares 20480
     write /dev/cpuctl/top-app/cpu.shares 20480
-
-    # CPUFreq
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 1000
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 10000
-    write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/up_rate_limit_us 2000
-    write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/down_rate_limit_us 5000
 
     # CPUSets
     write /dev/cpuset/background/cpus 0-1
