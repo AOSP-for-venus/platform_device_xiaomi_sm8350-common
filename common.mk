@@ -424,6 +424,8 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlay
 
 # Sensors
+$(call soong_config_set, SENSORS_XIAOMI, USES_SINGLE_TAP_SENSOR, true)
+
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.xiaomi-multihal
 
