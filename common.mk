@@ -199,6 +199,9 @@ $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/dis
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
 
+# Dolby Vision
+$(call soong_config_set, dolby_vision, enabled, true)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
