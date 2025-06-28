@@ -172,6 +172,8 @@ vendor.gatekeeper.disable_spu=true
 # Graphics
 debug.sf.frame_rate_multiple_threshold=60
 debug.sf.set_idle_timer_ms=3000
+persist.sys.sf.color_mode=0
+persist.sys.sf.color_saturation=
 persist.sys.sf.native_mode=258
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
