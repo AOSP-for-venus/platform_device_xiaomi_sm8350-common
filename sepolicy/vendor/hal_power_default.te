@@ -9,6 +9,9 @@ allow hal_power_default vendor_latency_device:chr_file rw_file_perms;
 allow hal_power_default appdomain:process { getsched setsched };
 allow hal_power_default self:capability sys_nice;
 
+# Set scheduling info for surfaceflinger (for adpf)
+allow hal_power_default surfaceflinger:process setsched;
+
 # Set scheduling info for system_server (for adpf)
 allow hal_power_default system_server:process setsched;
 
