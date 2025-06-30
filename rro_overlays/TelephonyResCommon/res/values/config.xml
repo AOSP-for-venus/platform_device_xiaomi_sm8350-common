@@ -27,7 +27,9 @@
     <!-- Array of countries that the dynamic routing is supported.
          Values should be ISO3166 country codes in lowercase. -->
     <string-array name="config_countries_dynamic_routing_emergency_enabled"
-            translatable="false">
+	    translatable="false">
+        <!-- b/393518741 -->
+        <item>cz</item>
         <item>in</item>
         <item>il</item>
         <item>tw</item>
@@ -43,6 +45,9 @@
          Values are the tuples of Country ISO, MNC, and numbers. -->
     <string-array name="config_dynamic_routing_emergency_numbers"
       translatable="false">
+        <!-- b/393518741 -->
+        <item>cz,01,156</item>
+        <item>cz,03,156</item>
         <item>in,,101,102,103,108</item>
         <item>il,,101,102</item>
         <item>tw,,110,119</item>
