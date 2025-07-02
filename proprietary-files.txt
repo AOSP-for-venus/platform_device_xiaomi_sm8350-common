@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from star V816.0.9.0.UKAMIXM
+# All unpinned blobs below are extracted from star V816.0.11.0.UKAMIXM
 
 # ADSP
 vendor/bin/adsprpcd
