@@ -18,3 +18,6 @@ remote_provisioning.hostname=remoteprovisioning.googleapis.com
 
 # Use 64-bit dex2oat for better dexopt time.
 dalvik.vm.dex2oat64.enabled=true
+
+# eBPF
+ro.bpf.kver_override=5.10.239
