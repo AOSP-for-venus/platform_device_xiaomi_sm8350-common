@@ -66,10 +66,10 @@ on property:vendor.post_boot.parsed=1
     setprop dalvik.vm.dex2oat-threads 6
 
     # IRQ Tuning
-    # IRQ 70: msm_drm0 -> CPU 7
-    # IRQ 222: kgsl_3d0_irq -> CPU 6
-    write /proc/irq/70/smp_affinity_list 7
-    write /proc/irq/222/smp_affinity_list 6
+    # IRQ 274: msm_drm -> CPU 7
+    # IRQ 271: kgsl_3d0_irq -> CPU 6
+    write /proc/irq/274/smp_affinity_list 7
+    write /proc/irq/271/smp_affinity_list 6
 
     # Samsung Generic I/O Scheduler
     write /dev/blkio/background/blkio.ssg.max_available_ratio 25
