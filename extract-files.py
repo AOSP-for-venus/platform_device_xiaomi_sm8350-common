@@ -60,6 +60,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('.*ozoaudio.*\n?', ''),
     'vendor/lib64/android.hardware.secure_element@1.0-impl.so': blob_fixup()
         .remove_needed('android.hidl.base@1.0.so'),
+    'vendor/lib64/c2.dolby.client.so': blob_fixup()
+        .add_needed('libcodec2_shim.so'),
     ('vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
 }  # fmt: skip
