@@ -1,0 +1,16 @@
+{
+    "Sensors":[
+        {
+            "Name":"battery",
+            "Type":"BATTERY",
+            "HotThreshold":["NAN", "NAN", "NAN", 80.0, "NAN", "NAN", 90.0],
+            "Multiplier":0.001
+        }
+    ],
+    "CoolingDevices":[
+        {
+            "Name":"battery",
+            "Type":"BATTERY"
+        }
+    ]
+}

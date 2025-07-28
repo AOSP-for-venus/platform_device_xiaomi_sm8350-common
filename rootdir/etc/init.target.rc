@@ -200,6 +200,23 @@ on charger
     setprop sys.usb.configfs 1
     write /sys/module/lpm_levels/parameters/sleep_disabled N
 
+    # Use charger thermal config
+    setprop vendor.thermal.config "thermal_info_config_charge.json"
+
+    # Create thermal symlink in off charging mode
+    mkdir /dev/thermal 0750 system system
+    mkdir /dev/thermal/tz-by-name 0750 system system
+    mkdir /dev/thermal/cdev-by-name 0750 system system
+
+on property:vendor.thermal.link_ready=1
+    # Thermal
+    chown system system /dev/thermal/cdev-by-name/thermal-cpufreq-0/user_vote
+    chown system system /dev/thermal/cdev-by-name/thermal-cpufreq-4/user_vote
+    chown system system /dev/thermal/cdev-by-name/thermal-cpufreq-7/user_vote
+    chown system system /dev/thermal/cdev-by-name/thermal-devfreq-0/user_vote
+    chown system system /dev/thermal/cdev-by-name/cdsp/user_vote
+    chown system system /dev/thermal/cdev-by-name/cdsp_hw/user_vote
+
 service vendor.lowi /vendor/bin/lowirpcd
    class core
    user system

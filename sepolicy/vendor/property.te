@@ -1,1 +1,4 @@
 vendor_internal_prop(vendor_power_prop)
+
+#thermal HAL
+vendor_internal_prop(vendor_thermal_prop)

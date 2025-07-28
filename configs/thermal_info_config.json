@@ -1,0 +1,192 @@
+{
+    "Sensors":[
+        {
+            "Name":"cpu-0-0-usr",
+            "Type":"CPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"cpu-0-1-usr",
+            "Type":"CPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"cpu-0-2-usr",
+            "Type":"CPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"cpu-0-3-usr",
+            "Type":"CPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"cpu-1-0-usr",
+            "Type":"CPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"cpu-1-1-usr",
+            "Type":"CPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"cpu-1-2-usr",
+            "Type":"CPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"cpu-1-3-usr",
+            "Type":"CPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"cpu-1-4-usr",
+            "Type":"CPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"cpu-1-5-usr",
+            "Type":"CPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"cpu-1-6-usr",
+            "Type":"CPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"cpu-1-7-usr",
+            "Type":"CPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"gpuss-0-usr",
+            "Type":"GPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"gpuss-1-usr",
+            "Type":"GPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"battery",
+            "Type":"BATTERY",
+            "HotThreshold":["NAN", "NAN", "NAN", 80.0, "NAN", "NAN", 90.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"nspss-0-usr",
+            "Type":"NPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"nspss-1-usr",
+            "Type":"NPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        },
+        {
+            "Name":"nspss-2-usr",
+            "Type":"NPU",
+            "HotThreshold":["NAN", "NAN", "NAN", 95.0, "NAN", "NAN", 115.0],
+            "Multiplier":0.001
+        }
+    ],
+    "CoolingDevices":[
+        {
+            "Name":"cpu-isolate0",
+            "Type":"CPU"
+        },
+        {
+            "Name":"cpu-isolate1",
+            "Type":"CPU"
+        },
+        {
+            "Name":"cpu-isolate2",
+            "Type":"CPU"
+        },
+        {
+            "Name":"cpu-isolate3",
+            "Type":"CPU"
+        },
+        {
+            "Name":"cpu-isolate4",
+            "Type":"CPU"
+        },
+        {
+            "Name":"cpu-isolate5",
+            "Type":"CPU"
+        },
+        {
+            "Name":"cpu-isolate6",
+            "Type":"CPU"
+        },
+        {
+            "Name":"cpu-isolate7",
+            "Type":"CPU"
+        },
+        {
+            "Name":"thermal-cluster-4-7",
+            "Type":"CPU"
+        },
+        {
+            "Name":"thermal-cpufreq-0",
+            "Type":"CPU",
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-0/user_vote",
+            "ScalingAvailableFrequenciesPath": "/sys/devices/system/cpu/cpufreq/policy0/scaling_available_frequencies"
+        },
+        {
+            "Name":"thermal-cpufreq-4",
+            "Type":"CPU",
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-4/user_vote",
+            "ScalingAvailableFrequenciesPath": "/sys/devices/system/cpu/cpufreq/policy4/scaling_available_frequencies"
+        },
+        {
+            "Name":"thermal-cpufreq-7",
+            "Type":"CPU",
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-7/user_vote",
+            "ScalingAvailableFrequenciesPath": "/sys/devices/system/cpu/cpufreq/policy7/scaling_available_frequencies"
+        },
+        {
+            "Name":"thermal-devfreq-0",
+            "Type":"GPU",
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-devfreq-0/user_vote",
+            "ScalingAvailableFrequenciesPath": "/sys/devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_available_frequencies"
+        },
+        {
+            "Name":"battery",
+            "Type":"BATTERY"
+        },
+        {
+            "Name":"cdsp",
+            "Type":"NPU",
+            "WritePath":"/dev/thermal/cdev-by-name/cdsp/user_vote"
+        },
+        {
+            "Name":"cdsp_hw",
+            "Type":"NPU",
+            "WritePath":"/dev/thermal/cdev-by-name/cdsp_hw/user_vote"
+        },
+        {
+            "Name":"modem_tj",
+            "Type":"MODEM"
+        }
+    ]
+}
