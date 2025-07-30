@@ -328,6 +328,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/yupik/media_codecs_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_yupik_v1.xml \
     $(LOCAL_PATH)/media/yupik/media_profiles_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_yupik_v1.xml
 
+$(call soong_config_set,stagefright,target_disable_thumbnail_block_model,true)
+
 # Minijail
 PRODUCT_PACKAGES += \
     libavservices_minijail_vendor
