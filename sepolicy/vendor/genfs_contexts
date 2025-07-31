@@ -8,6 +8,7 @@ genfscon sysfs /devices/platform/soc/soc:extcon_usb1/extcon u:object_r:sysfs_ext
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc u:object_r:vendor_sysfs_fingerprint:s0
 
 # Graphics
+genfscon sysfs /devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_available_frequencies u:object_r:vendor_sysfs_kgsl:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc- u:object_r:vendor_sysfs_sde_crtc:s0
 
 # Single Tap Sensor

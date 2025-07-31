@@ -8,6 +8,7 @@ allow hal_thermal_default proc_stat:file r_file_perms;
 allow hal_thermal_default self:netlink_generic_socket create_socket_perms_no_ioctl;
 allow hal_thermal_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 allow hal_thermal_default sysfs_gpu:file r_file_perms;
+allow hal_thermal_default vendor_sysfs_kgsl:file r_file_perms;
 
 hal_client_domain(hal_thermal_default, hal_power);
 
