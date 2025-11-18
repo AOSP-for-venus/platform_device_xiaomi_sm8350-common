@@ -368,6 +368,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     DeviceAsWebcamOverlayCommon \
     FrameworksResCommon \
+    GoogleWifiResCommon \
     SettingsResCommon \
     SystemUIResCommon \
     TelephonyResCommon \
