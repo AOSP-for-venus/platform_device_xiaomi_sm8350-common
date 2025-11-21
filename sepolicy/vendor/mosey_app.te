@@ -1,0 +1,55 @@
+type mosey_server_exec, exec_type, file_type, vendor_file_type;
+type mosey_server, domain, service_manager_type, system_server_service;
+type mosey_service, hal_service_type, service_manager_type;
+
+binder_call(mosey_app, mosey_server);
+
+allow mosey_app mosey_service:service_manager find;
+
+binder_call(mosey_server servicemanager);
+
+allow mosey_server mosey_server_exec:file r_file_perms;
+
+init_daemon_domain(mosey_server)
+
+add_service(mosey_server, mosey_service);
+
+allow mosey_server self:capability { net_admin net_raw };
+
+allow mosey_server sysfs_net:dir r_dir_perms;
+allow mosey_server sysfs_net:file r_file_perms;
+r_dir_file(mosey_server, sysfs_net)
+
+allow mosey_server self:udp_socket { create ioctl };
+allowxperm mosey_server self:udp_socket ioctl {
+    SIOCGIFFLAGS
+    SIOCSIFFLAGS
+    SIOCGIFMTU
+    SIOCSIFMTU
+    SIOCGIFCONF
+    SIOCETHTOOL
+    SIOCGMIIPHY
+};
+
+allow mosey_server self:unix_dgram_socket ioctl;
+allowxperm mosey_server self:unix_dgram_socket ioctl {
+    SIOCGIFFLAGS
+    SIOCSIFFLAGS
+    SIOCGIFCONF
+    SIOCETHTOOL
+};
+
+allow mosey_server self:packet_socket create_socket_perms;
+allowxperm mosey_server self:packet_socket ioctl { unpriv_sock_ioctls priv_sock_ioctls unpriv_tty_ioctls };
+
+allow mosey_server self:netlink_route_socket { read write create nlmsg_read nlmsg_write nlmsg_readpriv nlmsg_getneigh };
+
+allow mosey_server self:netlink_netfilter_socket create;
+
+allow mosey_server tun_device:chr_file rw_file_perms;
+allowxperm mosey_server tun_device:chr_file ioctl {
+    TUNSETIFF
+    TUNSETOFFLOAD
+};
+
+allow mosey_server self:tun_socket create;

@@ -1,0 +1,8 @@
+typeattribute mosey_app coredomain;
+app_domain(mosey_app)
+net_domain(mosey_app)
+
+# To use ServiceManager
+allow turbo_adapter app_api_service:service_manager find;
+
+binder_call(mosey_app, servicemanager);
