@@ -433,6 +433,12 @@ vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
 vendor/lib64/libmlipay.so
 vendor/lib64/libmlipay@1.1.so
 
+# Mosey (MOVE IT)
+vendor/bin/mosey_server|adfd709b67fd53ec27e7749a89deef90ab2aa5cb
+vendor/etc/init/mosey.rc|1ddc061a212cf284d71670e0932c940986ae2951
+vendor/etc/vintf/manifest/manifest_mosey.xml|c3e61750af19ed6aa3026e0991523597a5aacc32
+vendor/lib64/libmosey_daemon_ffi.so|97601fdf920211d5eddf8988d836821d70ce9d5e
+
 # NFC
 vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
 
