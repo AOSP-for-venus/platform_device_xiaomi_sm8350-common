@@ -1,0 +1,9 @@
+<compatibility-matrix version="1.0" type="framework">
+    <hal format="aidl">
+        <name>com.google.android.moseyservice</name>
+        <interface>
+            <name>IMoseyService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>

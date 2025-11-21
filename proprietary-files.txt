@@ -433,6 +433,12 @@ vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
 vendor/lib64/libmlipay.so
 vendor/lib64/libmlipay@1.1.so
 
+# Mosey - from mustang CP2A.260605.012 and patched
+system_ext/bin/mosey_server|635b8db999903c62e1d9adbd4fc243aa95d2e9e8
+system_ext/etc/init/mosey.rc|d20b03cf1ed00375615c50f7f05cda1e00fd9bad
+system_ext/etc/vintf/manifest/manifest_mosey.xml|54b0f8f425412f2d7d69d9bfe855aefa5a5a7de0
+system_ext/lib64/libmosey_daemon_ffi.so|be2d3f1d11c54779a9311308c65378ce7790f990
+
 # NFC
 vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
 
