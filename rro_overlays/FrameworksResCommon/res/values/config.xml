@@ -256,4 +256,148 @@
 
     <!-- Whether the new Auto Selection Network UI should be shown -->
     <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
+
+    <integer name="config_displayWhiteBalanceColorTemperatureDefault">6400</integer>
+    <integer name="config_displayWhiteBalanceColorTemperatureFilterHorizon">1000</integer>
+    <integer name="config_displayWhiteBalanceColorTemperatureMax">8000</integer>
+    <integer name="config_displayWhiteBalanceColorTemperatureMin">2500</integer>
+    <integer name="config_displayWhiteBalanceColorTemperatureSensorRate">100</integer>
+    <integer name="config_displayWhiteBalanceDecreaseDebounce">1000</integer>
+    <integer name="config_displayWhiteBalanceDisplayNominalWhiteCct">6543</integer>
+    <integer name="config_displayWhiteBalanceIncreaseDebounce">1000</integer>
+    <integer name="config_displayWhiteBalanceTransitionTime">8000</integer>
+    <integer name="config_displayWhiteBalanceTransitionTimeDecrease">8000</integer>
+    <integer name="config_displayWhiteBalanceTransitionTimeIncrease">3000</integer>
+    <bool name="config_displayWhiteBalanceAvailable">true</bool>
+    <bool name="config_displayWhiteBalanceEnabledDefault">true</bool>
+    <item name="config_displayWhiteBalanceHighLightAmbientColorTemperature" format="float" type="dimen">6700.0</item>
+    <item name="config_displayWhiteBalanceLowLightAmbientColorTemperature" format="float" type="dimen">5250.0</item>
+    <item name="config_displayWhiteBalanceLowLightAmbientColorTemperatureStrong" format="float" type="dimen">4000.0</item>
+    <integer-array name="config_displayWhiteBalanceAmbientColorTemperatures">
+        <item>2500</item>
+        <item>3100</item>
+        <item>3700</item>
+        <item>4200</item>
+        <item>4800</item>
+        <item>5300</item>
+        <item>6000</item>
+        <item>6500</item>
+        <item>7000</item>
+        <item>7500</item>
+        <item>8000</item>
+    </integer-array>
+    <integer-array name="config_displayWhiteBalanceBaseThresholds">
+        <item>6300</item>
+        <item>6400</item>
+        <item>6850</item>
+        <item>7450</item>
+    </integer-array>
+    <array name="config_displayWhiteBalanceDecreaseThresholds">
+        <item>0.007874</item>
+        <item>0.0075472</item>
+        <item>0.006993</item>
+        <item>0.0067114</item>
+    </array>
+    <integer-array name="config_displayWhiteBalanceDisplayColorTemperatures">
+        <item>5250</item>
+        <item>5550</item>
+        <item>6000</item>
+        <item>6250</item>
+        <item>6450</item>
+        <item>6550</item>
+        <item>6750</item>
+        <item>6850</item>
+        <item>6950</item>
+        <item>7050</item>
+        <item>7200</item>
+    </integer-array>
+    <string-array name="config_displayWhiteBalanceDisplayNominalWhite">
+        <item>0.9783</item>
+        <item>1.0000</item>
+        <item>1.1273</item>
+    </string-array>
+    <string-array name="config_displayWhiteBalanceDisplayPrimaries">
+        <item>0.5128</item>
+        <item>0.2413</item>
+        <item>0.0000</item>
+        <item>0.2598</item>
+        <item>0.6764</item>
+        <item>0.0441</item>
+        <item>0.2057</item>
+        <item>0.0823</item>
+        <item>1.0832</item>
+        <item>0.9783</item>
+        <item>1.0000</item>
+        <item>1.1273</item>
+    </string-array>
+    <integer-array name="config_displayWhiteBalanceDisplayRangeMinimums">
+        <item>0</item>
+    </integer-array>
+    <integer-array name="config_displayWhiteBalanceDisplaySteps">
+        <item>40</item>
+    </integer-array>
+    <array name="config_displayWhiteBalanceHighLightAmbientBiases">
+        <item>0.0</item>
+        <item>1.0</item>
+    </array>
+    <array name="config_displayWhiteBalanceHighLightAmbientBiasesStrong">
+        <item>0.0</item>
+        <item>1.0</item>
+    </array>
+    <array name="config_displayWhiteBalanceHighLightAmbientBrightnesses">
+        <item>130000.0</item>
+        <item>150000.0</item>
+    </array>
+    <array name="config_displayWhiteBalanceHighLightAmbientBrightnessesStrong">
+        <item>130000.0</item>
+        <item>150000.0</item>
+    </array>
+    <array name="config_displayWhiteBalanceIncreaseThresholds">
+        <item>0.007874</item>
+        <item>0.0075472</item>
+        <item>0.006993</item>
+        <item>0.0067114</item>
+    </array>
+    <array name="config_displayWhiteBalanceLowLightAmbientBiases">
+        <item>0.0</item>
+        <item>1.0</item>
+    </array>
+    <array name="config_displayWhiteBalanceLowLightAmbientBiasesStrong">
+        <item>0.0</item>
+        <item>1.0</item>
+    </array>
+    <array name="config_displayWhiteBalanceLowLightAmbientBrightnesses">
+        <item>3.0</item>
+        <item>10.0</item>
+    </array>
+    <array name="config_displayWhiteBalanceLowLightAmbientBrightnessesStrong">
+        <item>3.0</item>
+        <item>10.0</item>
+    </array>
+    <integer-array name="config_displayWhiteBalanceStrongAmbientColorTemperatures">
+        <item>3000</item>
+        <item>3500</item>
+        <item>4000</item>
+        <item>4500</item>
+        <item>5000</item>
+        <item>5500</item>
+        <item>6000</item>
+        <item>6500</item>
+        <item>7000</item>
+        <item>7500</item>
+        <item>8000</item>
+    </integer-array>
+    <integer-array name="config_displayWhiteBalanceStrongDisplayColorTemperatures">
+        <item>4000</item>
+        <item>4600</item>
+        <item>5400</item>
+        <item>6300</item>
+        <item>7200</item>
+        <item>7200</item>
+        <item>7200</item>
+        <item>7200</item>
+        <item>7200</item>
+        <item>7200</item>
+        <item>7200</item>
+    </integer-array>
 </resources>
