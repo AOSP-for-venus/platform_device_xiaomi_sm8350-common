@@ -261,6 +261,9 @@
     <integer name="config_displayWhiteBalanceColorTemperatureFilterHorizon">1000</integer>
     <integer name="config_displayWhiteBalanceColorTemperatureMax">8000</integer>
     <integer name="config_displayWhiteBalanceColorTemperatureMin">2500</integer>
+    <!-- See AmbientSensor.AmbientColorTemperatureSensor.
+         The ambient color temperature sensor name. -->
+    <string name="config_displayWhiteBalanceColorTemperatureSensorName">xiaomi.sensor.ambientlight.factory</string>
     <integer name="config_displayWhiteBalanceColorTemperatureSensorRate">100</integer>
     <integer name="config_displayWhiteBalanceDecreaseDebounce">1000</integer>
     <integer name="config_displayWhiteBalanceDisplayNominalWhiteCct">6543</integer>
