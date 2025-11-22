@@ -426,7 +426,8 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set, SENSORS_XIAOMI, USES_SINGLE_TAP_SENSOR, true)
 
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.xiaomi-multihal
+    android.hardware.sensors-service.xiaomi-multihal \
+    sensors.dynamic_sensor_hal
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
