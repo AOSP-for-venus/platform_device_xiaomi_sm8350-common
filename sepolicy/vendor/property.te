@@ -1,4 +1,7 @@
 vendor_internal_prop(vendor_power_prop)
 
+# Dynamic sensor
+vendor_internal_prop(vendor_dynamic_sensor_prop)
+
 #thermal HAL
 vendor_internal_prop(vendor_thermal_prop)
