@@ -118,7 +118,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
-$(call soong_config_set,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -201,7 +201,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
 
 # Dolby Vision
-$(call soong_config_set, dolby_vision, enabled, true)
+$(call soong_config_set_bool,dolby_vision,enabled,true)
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -330,7 +330,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/yupik/media_codecs_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_yupik_v1.xml \
     $(LOCAL_PATH)/media/yupik/media_profiles_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_yupik_v1.xml
 
-$(call soong_config_set,stagefright,target_disable_thumbnail_block_model,true)
+$(call soong_config_set_bool,stagefright,target_disable_thumbnail_block_model,true)
 
 # Minijail
 PRODUCT_PACKAGES += \
@@ -427,7 +427,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlay
 
 # Sensors
-$(call soong_config_set, SENSORS_XIAOMI, USES_SINGLE_TAP_SENSOR, true)
+$(call soong_config_set_bool,SENSORS_XIAOMI,USES_SINGLE_TAP_SENSOR,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.xiaomi-multihal \
