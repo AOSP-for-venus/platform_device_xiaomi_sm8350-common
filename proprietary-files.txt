@@ -144,7 +144,7 @@ vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437
 vendor/lib64/libdisp-aba.so|3ff1c1d30d96c3ce3608378b2afcc75b892845cb
 vendor/lib64/libdisplayqos.so|aa222f4c1a2d2fb60944c44f8a82621d6bc75184
 vendor/lib64/libdisplayskuutils.so|24660982383b059df85eb79945aed8490a68c7f0
-vendor/lib64/libdpps.so|294b81c975f631dd71cfcfb663d9d8af66704803
+vendor/lib64/libdpps.so|fa52ec802c1a3ddde9674239255e47f2f318f44f
 vendor/lib64/libhdr_tm.so|7954c5cd5c0b23fe8d0609361c22d24c59f1448b
 vendor/lib64/libmm-hdcpmgr.so|1d319df7c3f784cac6edf48aad3f379f90c2c6e5
 vendor/lib64/libqdcm-mode-parser.so|207143ab4dda0886bde2a0333d7a1bcd7af6f8e1
@@ -156,7 +156,7 @@ vendor/lib64/libsdm-colormgr-algo.so|5416a3b9b0735099c9b86f451f41386711787ea4
 vendor/lib64/libsdm-diag.so|e9bdee2afc558124d7b1464b1a7a7a7f12366b57
 vendor/lib64/libsdm-disp-vndapis.so|dc3ff8c971bbcb0d1b9e5079324d1d1d05a1fd39
 vendor/lib64/libsdmextension.so|b5d1b57306dca19dac582128845d2f4e70b0b0d6
-vendor/lib64/libsnapdragoncolor-manager.so|e7f55a1ba843bb570afa6bbf16bb61dc01ec74ea
+vendor/lib64/libsnapdragoncolor-manager.so|5e6da3f86a139ffa9c04512d940ee2dd23b33474
 vendor/lib64/libsnapdragoncolor-qdcm.so|673c41753603bacb197674df567723dfd928384e
 vendor/lib64/libtinyxml2_1.so|11ceb3f1e7650c41621d47e5ec5567c8f466086e
 vendor/lib64/vendor.display.color@1.0.so|07020ab42030e4752959f42b3d02368fa1693034
