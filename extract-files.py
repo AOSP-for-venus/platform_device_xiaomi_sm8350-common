@@ -53,6 +53,8 @@ blob_fixups: blob_fixups_user_type = {
         .remove_needed('android.hidl.base@1.0.so')
         .add_needed('libbinder_shim.so')
         .add_needed('libinput_shim.so'),
+    'vendor/bin/hw/dolbycodec2': blob_fixup()
+        .add_needed('libshim_dolby.so'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('#arch_timer, arm-pmu, arch_mem_timer', '#arch_timer, arm-pmu, arch_mem_timer, msm_drm, kgsl_3d0_irq')
         .regex_replace('IGNORED_IRQ=27,23,38', 'IGNORED_IRQ=27,23,38,274,271'),
