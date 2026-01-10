@@ -49,13 +49,13 @@ on early-boot
     write /sys/devices/virtual/cvp/cvp/boot 1
 
 on boot
-    # Set the io-scheduler to bfq on all mq support devices
-    write /sys/block/sda/queue/scheduler bfq
-    write /sys/block/sdb/queue/scheduler bfq
-    write /sys/block/sdc/queue/scheduler bfq
-    write /sys/block/sdd/queue/scheduler bfq
-    write /sys/block/sde/queue/scheduler bfq
-    write /sys/block/sdf/queue/scheduler bfq
+    # Set the io-scheduler to ssg on all mq support devices
+    write /sys/block/sda/queue/scheduler ssg
+    write /sys/block/sdb/queue/scheduler ssg
+    write /sys/block/sdc/queue/scheduler ssg
+    write /sys/block/sdd/queue/scheduler ssg
+    write /sys/block/sde/queue/scheduler ssg
+    write /sys/block/sdf/queue/scheduler ssg
 
     # Update io-scheduler tunables
     write /sys/block/sda/queue/iosched/slice_idle 0
