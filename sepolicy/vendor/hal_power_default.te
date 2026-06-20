@@ -24,6 +24,9 @@ allow hal_power_default hal_graphics_composer_default:process setsched;
 # Set scheduling info for system_server (for adpf)
 allow hal_power_default system_server:process setsched;
 
+allow hal_power_default powerhal_vendor_data_file:dir rw_dir_perms;
+allow hal_power_default powerhal_vendor_data_file:file create_file_perms;
+
 rw_dir_file(hal_power_default, proc)
 rw_dir_file(hal_power_default, proc_sched)
 rw_dir_file(hal_power_default, sysfs_devices_system_cpu)

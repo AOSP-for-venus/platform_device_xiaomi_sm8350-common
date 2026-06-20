@@ -35,6 +35,7 @@
 /(vendor|system/vendor)/bin/mlipayd@1.1          u:object_r:hal_mlipay_default_exec:s0
 
 # Power
+/data/vendor/powerhal(/.*)?                                        u:object_r:powerhal_vendor_data_file:s0
 /dev/xiaomi-touch                                                  u:object_r:vendor_touchfeature_device:s0
 /vendor/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr  u:object_r:hal_power_default_exec:s0
 
