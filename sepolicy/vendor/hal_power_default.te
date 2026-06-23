@@ -31,6 +31,9 @@ binder_call(hal_power_default, stats_service_server);
 allow hal_power_default powerhal_vendor_data_file:dir rw_dir_perms;
 allow hal_power_default powerhal_vendor_data_file:file create_file_perms;
 
+hal_client_domain(hal_power_default, hal_thermal)
+allow hal_power_default hal_thermal_service:service_manager find;
+
 rw_dir_file(hal_power_default, proc)
 rw_dir_file(hal_power_default, proc_sched)
 rw_dir_file(hal_power_default, sysfs_devices_system_cpu)
