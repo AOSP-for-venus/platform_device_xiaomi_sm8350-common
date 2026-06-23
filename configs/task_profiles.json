@@ -50,6 +50,26 @@
 
   "Profiles": [
     {
+      "Name": "SCHED_QOS_NONE",
+      "Actions": []
+    },
+    {
+      "Name": "SCHED_QOS_SENSITIVE_LIGHT",
+      "Actions": []
+    },
+    {
+      "Name": "SCHED_QOS_SENSITIVE_MODERATE",
+      "Actions": []
+    },
+    {
+      "Name": "SCHED_QOS_SENSITIVE_HEAVY",
+      "Actions": []
+    },
+    {
+      "Name": "SCHED_QOS_SENSITIVE_EXTREME",
+      "Actions": []
+    },
+    {
       "Name": "HighEnergySaving",
       "Actions": [
         {
