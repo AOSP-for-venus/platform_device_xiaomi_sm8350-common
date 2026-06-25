@@ -61,4 +61,29 @@
 
     <!-- Preferred max refresh rate at keyguard, if supported by the display. -->
     <integer name="config_keyguardMaxRefreshRate">60</integer>
+
+    <!--
+    Whether to enable heads up notifications expansion by default.
+    -->
+    <bool name="config_enableHUNExpansion">true</bool>
+
+    <!--
+    Indicates whether to use InfiniteGridLayout as the default grid layout for the Quick Settings
+    tiles.
+    -->
+    <bool name="config_useInfiniteGridLayoutAsDefault">true</bool>
+
+    <!-- The type of the light sensor used by the low light monitor. -->
+    <string name="config_lowLightMonitorLightSensorType" translatable="false">android.sensor.light</string>
+
+    <!-- The name of the light sensor used by the low light monitor. -->
+    <string name="config_lowLightMonitorLightSensorName" translatable="false">TMD3719ALSPRX Ambient Light Sensor Non-wakeup</string>
+
+    <array name="config_doze_brightness_sensor_to_wallpaper_scrim_opacity">
+        <item>-1</item>
+        <item>51</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </array>
 </resources>
