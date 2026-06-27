@@ -136,6 +136,7 @@ bluetooth.profile.opp.enabled?=true
 bluetooth.profile.pan.nap.enabled?=true
 bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
+bluetooth.sco.managed_by_audio=true
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
@@ -158,6 +159,7 @@ ro.crypto.volume.metadata.method=dm-default-key
 
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.enable_time_based_gc_trigger=true
 
 # DPM
 persist.vendor.dpm.feature=1
@@ -181,6 +183,7 @@ vendor.gatekeeper.disable_spu=true
 # Graphics
 debug.sf.auto_latch_unsignaled=0
 debug.sf.frame_rate_multiple_threshold=60
+# debug.sf.productionize_readback_screenshot=1
 debug.sf.set_idle_timer_ms=3000
 persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=
@@ -264,6 +267,7 @@ ro.incremental.enable=yes
 vendor.sys.thermal.data.path=/data/vendor/thermal/
 
 # USB
+ro.usb.data_protection.disable_when_locked.supported=true
 sys.usb.mtp.batchcancel=1
 vendor.usb.controller=a600000.dwc3
 vendor.usb.diag.func.name=ffs
