@@ -519,6 +519,42 @@
           }
         }
       ]
+    },
+    {
+      "Name": "SystemServerMemoryHighLimitP95",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params": {
+            "Name": "MemHigh",
+            "Value": "9500M"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SystemServerMemoryHighLimitP99",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params": {
+            "Name": "MemHigh",
+            "Value": "10427M"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "NoSwapUsage",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params": {
+            "Name": "SwapMax",
+            "Value": "0"
+          }
+        }
+      ]
     }
   ],
 
