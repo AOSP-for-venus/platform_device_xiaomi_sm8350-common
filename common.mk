@@ -550,6 +550,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
+# Virtual gamepad
+PRODUCT_PACKAGE_OVERLAYS += $(SRC_TARGET_DIR)/product/large_screen_foldable_common/overlay_gamepad
+
+PRODUCT_PACKAGES += \
+    VirtualGamepad
+
 # Vulkan
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute.xml \
