@@ -282,6 +282,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.qcom.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sh \
     $(LOCAL_PATH)/rootdir/bin/vendor_modprobe.sh:$(TARGET_COPY_OUT_VENDOR)/bin/vendor_modprobe.sh
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
