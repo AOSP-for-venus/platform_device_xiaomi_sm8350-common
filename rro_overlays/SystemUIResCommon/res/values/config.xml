@@ -81,9 +81,10 @@
 
     <array name="config_doze_brightness_sensor_to_wallpaper_scrim_opacity">
         <item>-1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
         <item>51</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
     </array>
 </resources>
