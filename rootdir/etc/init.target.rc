@@ -258,3 +258,21 @@ service citsensor-hal-1-1 /vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice
     group system input
     override
     task_profiles ServiceCapacityLow
+
+service logger /system/bin/logcat -b all -D -f /data/media/0/capture_logcat.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service debug_dmesg /system/bin/sh -c "dmesg -w > /data/media/0/capture_dmesg.txt"
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on property:logger.start_capture=1
+    start logger
+    start debug_dmesg
